@@ -28,13 +28,13 @@ class SyncController extends Controller
     public function sync()
     {
         session()->flush();
-
         $start = $this->microtime_float();
+
         $users = $this->userService->get();
         $articles = $this->articleService->get();
         $proposals = $this->proposalService->get();
-        $end = $this->microtime_float();
 
+        $end = $this->microtime_float();
         $duration = round($end - $start, 2);
 
         return view('welcome', compact('users', 'articles', 'proposals', 'duration'));

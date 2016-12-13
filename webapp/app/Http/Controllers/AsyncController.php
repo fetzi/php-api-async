@@ -47,8 +47,8 @@ class AsyncController extends Controller
         });
 
         $this->wait($userPromise, $articlePromise, $proposalPromise);
-        $end = $this->microtime_float();
 
+        $end = $this->microtime_float();
         $duration = round($end - $start, 2);
 
         return view('welcome', compact('users', 'articles', 'proposals', 'duration'));

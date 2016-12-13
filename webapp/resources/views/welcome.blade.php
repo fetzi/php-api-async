@@ -15,7 +15,7 @@
 <body>
 <div class="container">
     <div>
-        <h1>API request time: <b>{{ $duration }}</b></h1>
+        <h1>API request time: <b>{{ $duration }} sec</b></h1>
 
         @if(Session::has('user-status'))
             <div class="alert alert-danger" role="alert">{{ Session::get('user-status') }}</div>
